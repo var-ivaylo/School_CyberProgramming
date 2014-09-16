@@ -1,3 +1,3 @@
 ## CyberProgramming
 
-*HW_01_Java_Fundamentals.* **A few simple tasks to see how Java looks.**
+*HW01\_Java\_Fundamentals.* **A few simple tasks to see how Java looks.**
