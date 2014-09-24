@@ -10,8 +10,8 @@ public class ToUpperTaskRunner {
 	private static BufferedReader reader;
 
 	public static void main(String[] args) throws IOException {
-		final InputStream inputSource = System.in;
-		final InputStreamReader inputReader = new InputStreamReader(inputSource);
+		InputStream inputSource = System.in;
+		InputStreamReader inputReader = new InputStreamReader(inputSource);
 		ToUpperTaskRunner.reader = new BufferedReader(inputReader);
 
 		String newLine;
@@ -19,6 +19,8 @@ public class ToUpperTaskRunner {
 			System.out.println(newLine.toUpperCase());
 			// System.out.println(customToUpperCase(newLine));
 		}
+		
+		reader.close();
 	}
 
 	private static String customToUpperCase(String str) {
