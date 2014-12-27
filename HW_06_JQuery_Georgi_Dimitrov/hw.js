@@ -20,4 +20,9 @@ $(function() {
 
 	//Task 08
 	$('div#dynamiccontent').append('<ul id="posts"/>');
+
+	//Task 09
+	$('li#new-button a').click(function() {
+		alert('hello world');
+	});
 })
