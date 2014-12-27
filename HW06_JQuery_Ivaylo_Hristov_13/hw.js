@@ -1,6 +1,8 @@
 $(function() {
 	'use strict';
 
+	var jsonHost = 'http://jsonplaceholder.typicode.com/';
+
 	// Task 02
 	console.log($('div#footer > a:first').attr('title'));
 
@@ -31,5 +33,22 @@ $(function() {
 	$('li#menu-item-new-bttn > a').click(function() {
 		var $first = $('div.inscreen > div:first').replaceWith($('div.inscreen > div:nth-child(2)'));
 		$('div.inscreen > div:first').after($first);
+	});
+
+	// Task 11
+	$.get(jsonHost + 'posts/', function(posts) {
+		var $ul = $('ul#posts'),
+			i = 0;
+
+		$.each(posts, function() {
+			var $liPost = $('<li/>');
+
+			$liPost.text(this.title);
+			$ul.append($liPost);
+
+			if (++i >= 5) {
+				return false;
+			}
+		});
 	});
 });
