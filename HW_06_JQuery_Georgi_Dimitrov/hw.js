@@ -16,5 +16,8 @@ $(function() {
 	$('div#dynamiccontent').append('<input id="textinput" type="text"/>');
 
 	//Task 07
-	$('div#dynamiccontent').append('<button id="addbutton"/>');	
+	$('div#dynamiccontent').append('<button id="addbutton"/>');
+
+	//Task 08
+	$('div#dynamiccontent').append('<ul id="posts"/>');
 })
