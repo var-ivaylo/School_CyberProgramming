@@ -18,4 +18,7 @@ $(function() {
 
 	// Task 07
 	$('div#dynamiccontent').append('<button id="addbutton"/>');
+
+	// Task 08
+	$('div#dynamiccontent').append('<ul id="posts"/>');
 });
