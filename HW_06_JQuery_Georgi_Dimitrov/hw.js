@@ -25,4 +25,17 @@ $(function() {
 	$('li#new-button a').click(function() {
 		alert('hello world');
 	});
+
+	//Task 10
+	$('li#new-button a').click(function() {
+		var $first = $('div.inscreen div:first');
+		var $second = $('div.inscreen div:nth-child(2)');
+
+		$('div.inscreen div:first').replaceWith($second);
+		$('div.inscreen div:first').after($first);
+	});
+
+
+
+
 })
