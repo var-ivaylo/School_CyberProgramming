@@ -26,4 +26,10 @@ $(function() {
 	$('li#menu-item-new-bttn > a').click(function() {
 		alert('hello world');
 	});
+
+	// Task 10
+	$('li#menu-item-new-bttn > a').click(function() {
+		var $first = $('div.inscreen > div:first').replaceWith($('div.inscreen > div:nth-child(2)'));
+		$('div.inscreen > div:first').after($first);
+	});
 });
