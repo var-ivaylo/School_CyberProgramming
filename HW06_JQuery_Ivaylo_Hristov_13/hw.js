@@ -15,4 +15,7 @@ $(function() {
 
 	// Task 06
 	$('div#dynamiccontent').append('<input id="textinput" type="text"/>');
+
+	// Task 07
+	$('div#dynamiccontent').append('<button id="addbutton"/>');
 });
