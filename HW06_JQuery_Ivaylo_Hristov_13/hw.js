@@ -51,4 +51,11 @@ $(function() {
 			}
 		});
 	});
+
+	// Task 12
+	$('button#addbutton').click(function() {
+		if ($('input#textinput').val() === '') {
+			alert("you must enter text");
+		}
+	});
 });
