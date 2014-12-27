@@ -9,4 +9,7 @@ $(function() {
 
 	// Task 04
 	$('ul#menu-top-level-menu').append('<li id="menu-item-new-bttn"><a href="#">new button</a></li>');
+
+	// Task 05
+	$('div#footer').prepend('<div id="dynamiccontent"/>');
 });
