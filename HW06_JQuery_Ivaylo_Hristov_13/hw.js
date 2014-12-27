@@ -12,4 +12,7 @@ $(function() {
 
 	// Task 05
 	$('div#footer').prepend('<div id="dynamiccontent"/>');
+
+	// Task 06
+	$('div#dynamiccontent').append('<input id="textinput" type="text"/>');
 });
