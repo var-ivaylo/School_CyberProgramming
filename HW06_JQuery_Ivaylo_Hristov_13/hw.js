@@ -64,6 +64,7 @@ $(function() {
 	*/
 
 	// Task 13
+	/*
 	$('button#addbutton').click(function() {
 		var inputVal = $('input#textinput').val();
 
@@ -74,6 +75,29 @@ $(function() {
 				title: inputVal,
 				body: 'lorem ipsum',
 				userId: 1
+			});
+		}
+	});
+	*/
+
+	// Task 14
+	$('button#addbutton').click(function() {
+		var inputVal = $('input#textinput').val();
+
+		if (inputVal === '') {
+			alert("you must enter text");
+		} else {
+			$.post(jsonHost + 'posts/', {
+				title: inputVal,
+				body: 'lorem ipsum',
+				userId: 1
+			}, function(postRes) {
+				$.get(jsonHost + 'posts/' + postRes.id, function(post) {
+					var $liPost = $('<li/>');
+
+					$liPost.text(post.title);
+					$('ul#posts').append($liPost);
+				});
 			});
 		}
 	});
