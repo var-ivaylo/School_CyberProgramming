@@ -177,4 +177,7 @@ $(function() {
 			});
 		}
 	});
+
+	// Task 17
+	$('ul#posts').before('<input id="filterInput" type="text"/>');
 });
