@@ -180,4 +180,19 @@ $(function() {
 
 	// Task 17
 	$('ul#posts').before('<input id="filterInput" type="text"/>');
+
+	// Task 18
+	$('input#filterInput').change(function() {
+		$.get(jsonHost + 'posts?userId=' + $(this).val(), function(posts) {
+			var $ul = $('ul#posts');
+
+			$.each(posts, function() {
+				var $liPost = $('<li/>');
+
+				$liPost.text(this.title);
+
+				$ul.append($liPost);
+			});
+		});
+	});
 });
