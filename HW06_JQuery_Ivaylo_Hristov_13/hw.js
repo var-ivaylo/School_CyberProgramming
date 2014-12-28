@@ -19,7 +19,7 @@ $(function() {
 	$('div#dynamiccontent').append('<input id="textinput" type="text"/>');
 
 	// Task 07
-	$('div#dynamiccontent').append('<button id="addbutton"/>');
+	$('div#dynamiccontent').append('<button id="addbutton">ADD</button>');
 
 	// Task 08
 	$('div#dynamiccontent').append('<ul id="posts"/>');
@@ -46,6 +46,7 @@ $(function() {
 			var $liPost = $('<li/>');
 
 			$liPost.text(this.title);
+
 			$ul.append($liPost);
 
 			if (++i >= 5) {
@@ -81,6 +82,7 @@ $(function() {
 	*/
 
 	// Task 14
+	/*
 	$('button#addbutton').click(function() {
 		var inputVal = $('input#textinput').val();
 
@@ -96,6 +98,38 @@ $(function() {
 					var $liPost = $('<li/>');
 
 					$liPost.text(post.title);
+
+					$('ul#posts').append($liPost);
+				});
+			});
+		}
+	});
+	*/
+
+	// Task 15
+	$('button#addbutton').click(function() {
+		var inputVal = $('input#textinput').val();
+
+		if (inputVal === '') {
+			alert("you must enter text");
+		} else {
+			$.post(jsonHost + 'posts/', {
+				title: inputVal,
+				body: 'lorem ipsum',
+				userId: 1
+			}, function(postRes) {
+				$.get(jsonHost + 'posts/' + postRes.id, function(post) {
+					var $liPost = $('<li/>'),
+						$xBtn = $('<button id="deleteButton"/>');
+
+					$xBtn.text('X');
+					$xBtn.click(function() {
+						alert("deleting");
+					});
+
+					$liPost.text(post.title);
+					$liPost.append($xBtn);
+
 					$('ul#posts').append($liPost);
 				});
 			});
