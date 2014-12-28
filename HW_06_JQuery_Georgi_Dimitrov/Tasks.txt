@@ -1,0 +1,25 @@
+﻿1) copy html from http://www.elsys-bg.org/ and add required js libraries (e.g. jquery)
+-- selection --
+2) select the first <a> element in the footer (<a class="tu" title="Технически Университет - София" href="http://www.tu-sofia.bg/">Технически Университет - София</a>) and console.log() its title
+3) select the text in the first column (called "училището") and console.log() it ("Единственото по рода си...")
+-- dom manipulation --
+4) select unordered list with id "menu-top-level-menu" and add a new <li> with an <a> (content: "new button") in it (like existing items)
+5) add new empty <div> with id "dynamiccontent" as first child of div with id "footer"
+6) add new input with id "textinput" to the <div> that has been created in 5).
+7) add new button with id "addbutton" to the <div> that has been created in 5).
+8) add new <ul> with id "posts" to the <div> that has been created in 5).
+-- click handlers --
+9) add a clickhandler to the <a> that has been added in 4). The click handler should alert("hello world")
+10) add a clickhandler to the <a> that has been added in 4). The click handler should switch the first and the second columns ("училището" and "съобщения") and corresponding text
+-- ajax --
+11) get first 5 posts from http://jsonplaceholder.typicode.com/posts and add them as a <li> to the list that has been created in 8).
+12) add a click handler to the button that has been added in 7) that checks whether the input with id "textinput" has value and if it is empty - show alert("you must enter text")
+13) extend the function that has been defined in 12) as follows: if there is content - send POST to http://jsonplaceholder.typicode.com/posts with appropriate JSON
+14) extend the function that has been defined in 13) as follows: get the ID of the newly created post and get its content from http://jsonplaceholder.typicode.com/posts/<ID> and add it to the list that has been created in 8).
+15) extend the function that has been defined in 14) as follows: add a button "X" next to every created post and add a click handler. The click handler should alert("deleting")
+16) extend the clickhandler that has been defined in 15) as follows: ask the user for confirmation (see confirm() function) and do nothing if the user declines confirmation. If the user accepts the confirmation - send a DELETE request to http://jsonplaceholder.typicode.com/posts/<ID> and if the request succeeds - remove the <li> created for this post
+-- filtering --
+17) Add an input before the list defined in 8)
+18) add a change handler to the input created in 17). When the input is changed - get its content and create GET request to http://jsonplaceholder.typicode.com/posts?userId=<INPUT VALUE>. Response of this request should be added to the list defined in 8).
+19) Extend 18): Before adding to the list - remove all <li> elements from the list defined in 8)
+20) Add support for deleting items get from request in 18) - X next to every post that has behaviour as it is defined in 16)
