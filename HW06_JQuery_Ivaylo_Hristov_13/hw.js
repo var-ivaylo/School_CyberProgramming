@@ -107,6 +107,7 @@ $(function() {
 	*/
 
 	// Task 15
+	/*
 	$('button#addbutton').click(function() {
 		var inputVal = $('input#textinput').val();
 
@@ -125,6 +126,47 @@ $(function() {
 					$xBtn.text('X');
 					$xBtn.click(function() {
 						alert("deleting");
+					});
+
+					$liPost.text(post.title);
+					$liPost.append($xBtn);
+
+					$('ul#posts').append($liPost);
+				});
+			});
+		}
+	});
+	*/
+
+	// Task 16
+	$('button#addbutton').click(function() {
+		var inputVal = $('input#textinput').val();
+
+		if (inputVal === '') {
+			alert("you must enter text");
+		} else {
+			$.post(jsonHost + 'posts/', {
+				title: inputVal,
+				body: 'lorem ipsum',
+				userId: 1
+			}, function(postRes) {
+				$.get(jsonHost + 'posts/' + postRes.id, function(post) {
+					var $liPost = $('<li/>'),
+						$xBtn = $('<button id="deleteButton"/>');
+
+					$xBtn.text('X');
+					$xBtn.click(function() {
+						var confirmation = confirm('are you sure you want to remove post#' + post.id);
+
+						if (confirmation) {
+							$.ajax({
+								url: jsonHost + 'posts/' + post.id,
+								type: 'DELETE',
+								success: function() {
+									$xBtn.parent().remove();
+								}
+							});
+						}
 					});
 
 					$liPost.text(post.title);
