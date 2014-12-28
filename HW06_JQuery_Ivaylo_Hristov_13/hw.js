@@ -199,6 +199,7 @@ $(function() {
 	*/
 
 	// Task 19
+	/*
 	$('input#filterInput').change(function() {
 		$('ul#posts').empty();
 
@@ -209,6 +210,42 @@ $(function() {
 				var $liPost = $('<li/>');
 
 				$liPost.text(this.title);
+
+				$ul.append($liPost);
+			});
+		});
+	});
+	*/
+
+	// Task 20
+	$('input#filterInput').change(function() {
+		$('ul#posts').empty();
+
+		$.get(jsonHost + 'posts?userId=' + $(this).val(), function(posts) {
+			var $ul = $('ul#posts');
+
+			$.each(posts, function() {
+				var $liPost = $('<li/>'),
+					$xBtn = $('<button id="deleteButton"/>'),
+					postId = this.id;
+
+				$xBtn.text('X');
+				$xBtn.click(function() {
+					var confirmation = confirm('are you sure you want to remove post#' + postId);
+
+					if (confirmation) {
+						$.ajax({
+							url: jsonHost + 'posts/' + postId,
+							type: 'DELETE',
+							success: function() {
+								$xBtn.parent().remove();
+							}
+						});
+					}
+				});
+
+				$liPost.text(this.title);
+				$liPost.append($xBtn);
 
 				$ul.append($liPost);
 			});
