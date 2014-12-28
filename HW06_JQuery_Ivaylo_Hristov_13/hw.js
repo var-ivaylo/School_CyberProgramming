@@ -182,7 +182,26 @@ $(function() {
 	$('ul#posts').before('<input id="filterInput" type="text"/>');
 
 	// Task 18
+	/*
 	$('input#filterInput').change(function() {
+		$.get(jsonHost + 'posts?userId=' + $(this).val(), function(posts) {
+			var $ul = $('ul#posts');
+
+			$.each(posts, function() {
+				var $liPost = $('<li/>');
+
+				$liPost.text(this.title);
+
+				$ul.append($liPost);
+			});
+		});
+	});
+	*/
+
+	// Task 19
+	$('input#filterInput').change(function() {
+		$('ul#posts').empty();
+
 		$.get(jsonHost + 'posts?userId=' + $(this).val(), function(posts) {
 			var $ul = $('ul#posts');
 
