@@ -1,0 +1,27 @@
+## Winter Homework Tasks
+
+[1. copy html from http://www.elsys-bg.org/ and add required js libraries &#40;e.g. jquery&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/6c8808ea258914e5bd0392c097b4f48d625b027f)  
+### -- selection --  
+[2. select the first &lt;a&gt; element in the footer &#40;&lt;a class="tu" title="Технически Университет - София" href="http://www.tu-sofia.bg/"&gt;Технически Университет - София&lt;/a&gt;&#41; and console.log&#40;&#41; its title](https://github.com/var-ivaylo/School_CyberProgramming/commit/c951f51e3e8ca89b6a5352fef4aa9b21bb420c72)  
+[3. select the text in the first column &#40;called "училището"&#41; and console.log&#40;&#41; it &#40;"Единственото по рода си..."&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/03c10da06739984d713c5e78bc4267f3ca854cbe)  
+### -- dom manipulation --  
+[4. select unordered list with id "menu-top-level-menu" and add a new &lt;li&gt; with an &lt;a&gt; &#40;content: "new button"&#41; in it &#40;like existing items&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/f134739314917dbd7db76a08952c2fd254f4d123)  
+[5. add new empty &lt;div&gt; with id "dynamiccontent" as first child of div with id "footer"](https://github.com/var-ivaylo/School_CyberProgramming/commit/5f7d07ab249fa42096e3c4fbaa84eb868764e42b)  
+[6. add new input with id "textinput" to the &lt;div&gt; that has been created in 5&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/4c3ed370e344a7d766c6ec879cf4c7f033ec0ea7)  
+[7. add new button with id "addbutton" to the &lt;div&gt; that has been created in 5&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/9d043978fb06be50788be823f87de1c397b023c3)  
+[8. add new &lt;ul&gt; with id "posts" to the &lt;div&gt; that has been created in 5&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/c60e28dae6f59ca125b11abe108444c2a5a5d7d0)  
+### -- click handlers --  
+[9. add a clickhandler to the &lt;a&gt; that has been added in 4&#41;. The click handler should alert&#40;"hello world"&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/3b366f5be93c42b54fdc8a4e77ab639010e7996c)  
+[10. add a clickhandler to the &lt;a&gt; that has been added in 4&#41;. The click handler should switch the first and the second columns &#40;"училището" and "съобщения"&#41; and corresponding text](https://github.com/var-ivaylo/School_CyberProgramming/commit/7586586fab278184870e839a84d7fe15cf1fabee)  
+### -- ajax --  
+[11. get first 5 posts from http://jsonplaceholder.typicode.com/posts and add them as a &lt;li&gt; to the list that has been created in 8&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/c0d6a0c92bbd88c6d3e0259634b579c53e6446df)  
+[12. add a click handler to the button that has been added in 7&#41; that checks whether the input with id "textinput" has value and if it is empty - show alert&#40;"you must enter text"&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/4a4a6a7845c4aff1ac68d2c0419d29f47241e4ea)  
+[13. extend the function that has been defined in 12&#41; as follows: if there is content - send POST to http://jsonplaceholder.typicode.com/posts with appropriate JSON](https://github.com/var-ivaylo/School_CyberProgramming/commit/b61ec5b8b44d19930ce74f2d0691fbae54f51594)  
+[14. extend the function that has been defined in 13&#41; as follows: get the ID of the newly created post and get its content from http://jsonplaceholder.typicode.com/posts/&lt;ID&gt; and add it to the list that has been created in 8&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/2cd17f6b0f4399866b37a90637ea3bb978d385d0)  
+[15. extend the function that has been defined in 14&#41; as follows: add a button "X" next to every created post and add a click handler. The click handler should alert&#40;"deleting"&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/b4e37c9b729014a4f88f04b24cb47533d252b3ef)  
+[16. extend the clickhandler that has been defined in 15&#41; as follows: ask the user for confirmation &#40;see confirm&#40;&#41; function&#41; and do nothing if the user declines confirmation. If the user accepts the confirmation - send a DELETE request to http://jsonplaceholder.typicode.com/posts/&lt;ID&gt; and if the request succeeds - remove the &lt;li&gt; created for this post](https://github.com/var-ivaylo/School_CyberProgramming/commit/881a8818f660b59eb583d163d0c29fad9245ada9)  
+### -- filtering --  
+[17. Add an input before the list defined in 8&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/bcf896b3339b1af7dde869a9ef87e9f40c84995b)  
+[18. add a change handler to the input created in 17&#41;. When the input is changed - get its content and create GET request to http://jsonplaceholder.typicode.com/posts?userId=&lt;INPUT VALUE&gt;. Response of this request should be added to the list defined in 8&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/176230a70f49250b35b3419efc358e5a9b3b9ccb)  
+[19. Extend 18&#41;: Before adding to the list - remove all &lt;li&gt; elements from the list defined in 8&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/93144267f3af05f5af3cc4adddc433f66c5527a5)  
+[20. Add support for deleting items get from request in 18&#41; - X next to every post that has behaviour as it is defined in 16&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/5ac97f408d5d3c80ef3e9dcb7b7834a28849a44f)  
