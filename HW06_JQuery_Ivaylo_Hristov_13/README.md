@@ -1,9 +1,9 @@
-## Winter Homework Tasks
+п»ї## Winter Homework Tasks
 
 [1. copy html from http://www.elsys-bg.org/ and add required js libraries &#40;e.g. jquery&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/6c8808ea258914e5bd0392c097b4f48d625b027f)  
 ### -- selection --  
-[2. select the first &lt;a&gt; element in the footer &#40;&lt;a class="tu" title="Технически Университет - София" href="http://www.tu-sofia.bg/"&gt;Технически Университет - София&lt;/a&gt;&#41; and console.log&#40;&#41; its title](https://github.com/var-ivaylo/School_CyberProgramming/commit/c951f51e3e8ca89b6a5352fef4aa9b21bb420c72)  
-[3. select the text in the first column &#40;called "училището"&#41; and console.log&#40;&#41; it &#40;"Единственото по рода си..."&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/03c10da06739984d713c5e78bc4267f3ca854cbe)  
+[2. select the first &lt;a&gt; element in the footer &#40;&lt;a class="tu" title="РўРµС…РЅРёС‡РµСЃРєРё РЈРЅРёРІРµСЂСЃРёС‚РµС‚ - РЎРѕС„РёСЏ" href="http://www.tu-sofia.bg/"&gt;РўРµС…РЅРёС‡РµСЃРєРё РЈРЅРёРІРµСЂСЃРёС‚РµС‚ - РЎРѕС„РёСЏ&lt;/a&gt;&#41; and console.log&#40;&#41; its title](https://github.com/var-ivaylo/School_CyberProgramming/commit/c951f51e3e8ca89b6a5352fef4aa9b21bb420c72)  
+[3. select the text in the first column &#40;called "СѓС‡РёР»РёС‰РµС‚Рѕ"&#41; and console.log&#40;&#41; it &#40;"Р•РґРёРЅСЃС‚РІРµРЅРѕС‚Рѕ РїРѕ СЂРѕРґР° СЃРё..."&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/03c10da06739984d713c5e78bc4267f3ca854cbe)  
 ### -- dom manipulation --  
 [4. select unordered list with id "menu-top-level-menu" and add a new &lt;li&gt; with an &lt;a&gt; &#40;content: "new button"&#41; in it &#40;like existing items&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/f134739314917dbd7db76a08952c2fd254f4d123)  
 [5. add new empty &lt;div&gt; with id "dynamiccontent" as first child of div with id "footer"](https://github.com/var-ivaylo/School_CyberProgramming/commit/5f7d07ab249fa42096e3c4fbaa84eb868764e42b)  
@@ -12,7 +12,7 @@
 [8. add new &lt;ul&gt; with id "posts" to the &lt;div&gt; that has been created in 5&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/c60e28dae6f59ca125b11abe108444c2a5a5d7d0)  
 ### -- click handlers --  
 [9. add a clickhandler to the &lt;a&gt; that has been added in 4&#41;. The click handler should alert&#40;"hello world"&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/3b366f5be93c42b54fdc8a4e77ab639010e7996c)  
-[10. add a clickhandler to the &lt;a&gt; that has been added in 4&#41;. The click handler should switch the first and the second columns &#40;"училището" and "съобщения"&#41; and corresponding text](https://github.com/var-ivaylo/School_CyberProgramming/commit/7586586fab278184870e839a84d7fe15cf1fabee)  
+[10. add a clickhandler to the &lt;a&gt; that has been added in 4&#41;. The click handler should switch the first and the second columns &#40;"СѓС‡РёР»РёС‰РµС‚Рѕ" and "СЃСЉРѕР±С‰РµРЅРёСЏ"&#41; and corresponding text](https://github.com/var-ivaylo/School_CyberProgramming/commit/7586586fab278184870e839a84d7fe15cf1fabee)  
 ### -- ajax --  
 [11. get first 5 posts from http://jsonplaceholder.typicode.com/posts and add them as a &lt;li&gt; to the list that has been created in 8&#41;.](https://github.com/var-ivaylo/School_CyberProgramming/commit/c0d6a0c92bbd88c6d3e0259634b579c53e6446df)  
 [12. add a click handler to the button that has been added in 7&#41; that checks whether the input with id "textinput" has value and if it is empty - show alert&#40;"you must enter text"&#41;](https://github.com/var-ivaylo/School_CyberProgramming/commit/4a4a6a7845c4aff1ac68d2c0419d29f47241e4ea)  
