@@ -59,7 +59,15 @@ $(function() {
 					var $xBtn = $('<button/>').text('X');
 
 					$xBtn.click(function() {
-						alert('Deleting');
+						if (confirm('Are you sure you want to delete this?')) {
+							$.ajax({
+								method: 'DELETE',
+								url: 'http://jsonplaceholder.typicode.com/posts/' + postRes.id,
+								success: function() {
+									$xBtn.parent().remove();
+								}
+							});
+						}
 					});
 
 					$liPost.text(post.title);
