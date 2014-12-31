@@ -35,6 +35,14 @@ $(function() {
 		$('div.inscreen div:first').after($first);
 	});
 
+	//Task 11
+	$.get("http://jsonplaceholder.typicode.com/posts", function(postsData) {
+		var $lists = $('#posts');
+		for (var i = 0; i < 5; i++) {
+			$lists.append('<li>' + postsData[i].title + '</li>');
+		};
+	})
+	
 
 
 
