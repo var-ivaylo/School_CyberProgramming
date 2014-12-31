@@ -82,6 +82,15 @@ $(function() {
 		};
 	});
 
-
+	//Task 18
+	$('#textinput2').change(function(){
+		var data = $(this).val();
+		var destination = 'http://jsonplaceholder.typicode.com/posts?userId=' + data;
+		$.get(destination, function(getData){
+			$.each(getData, function(){
+				$('#posts').append('<li>' + this.title + '</li>');
+			});
+		});
+	});
 
 });
