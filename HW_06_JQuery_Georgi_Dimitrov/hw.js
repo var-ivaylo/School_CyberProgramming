@@ -41,7 +41,14 @@ $(function() {
 		for (var i = 0; i < 5; i++) {
 			$lists.append('<li>' + postsData[i].title + '</li>');
 		};
-	})
+	});
+
+	//Task 12
+	$('#addbutton').click(function(){
+		if ($('#textinput').val() === '') {
+			alert("you must enter text");
+		};
+	});
 	
 
 
