@@ -17,6 +17,7 @@ $(function() {
 
 	//Task 07
 	$('div#dynamiccontent').append('<button id="addbutton"/>');
+	$('#addbutton').text('ADD');
 
 	//Task 17
 	$('div#dynamiccontent').append('<input id="textinput2" type="text"/>');
@@ -86,12 +87,31 @@ $(function() {
 	$('#textinput2').change(function(){
 		$('#posts').empty();
 
-
 		var data = $(this).val();
 		var destination = 'http://jsonplaceholder.typicode.com/posts?userId=' + data;
 		$.get(destination, function(getData){
 			$.each(getData, function(){
-				$('#posts').append('<li>' + this.title + '</li>');
+				var $liPost = $('<li/>');
+				var $xBtn = $('<button/>').text('X');
+
+				var postData = this;
+
+				$xBtn.click(function() {
+					if (confirm('Are you sure you want to delete this?')) {
+						$.ajax({
+							method: 'DELETE',
+							url: 'http://jsonplaceholder.typicode.com/posts/' + postData.id,
+							success: function() {
+								$xBtn.parent().remove();
+							}
+						});
+					}
+				});
+
+				$liPost.text(postData.title);
+				$liPost.append($xBtn);
+
+				$('#posts').append($liPost);
 			});
 		});
 	});
