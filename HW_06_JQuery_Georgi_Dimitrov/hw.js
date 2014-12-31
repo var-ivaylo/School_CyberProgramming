@@ -84,6 +84,9 @@ $(function() {
 
 	//Task 18
 	$('#textinput2').change(function(){
+		$('#posts').empty();
+
+
 		var data = $(this).val();
 		var destination = 'http://jsonplaceholder.typicode.com/posts?userId=' + data;
 		$.get(destination, function(getData){
