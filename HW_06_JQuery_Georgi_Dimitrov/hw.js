@@ -47,6 +47,13 @@ $(function() {
 	$('#addbutton').click(function(){
 		if ($('#textinput').val() === '') {
 			alert("you must enter text");
+		}
+		else {
+			$.post("http://jsonplaceholder.typicode.com/posts", {
+				title: $('#textinput').val(),
+				body: 'random',
+				userId: 123
+			});
 		};
 	});
 	
