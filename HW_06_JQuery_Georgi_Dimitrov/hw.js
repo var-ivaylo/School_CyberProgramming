@@ -56,8 +56,14 @@ $(function() {
 			}, function(postRes) {
 				$.get("http://jsonplaceholder.typicode.com/posts/" + postRes.id, function(post) {
 					var $liPost = $('<li/>');
+					var $xBtn = $('<button/>').text('X');
+
+					$xBtn.click(function() {
+						alert('Deleting');
+					});
 
 					$liPost.text(post.title);
+					$liPost.append($xBtn);
 
 					$('ul#posts').append($liPost);
 				});
