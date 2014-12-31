@@ -53,11 +53,16 @@ $(function() {
 				title: $('#textinput').val(),
 				body: 'random',
 				userId: 123
+			}, function(postRes) {
+				$.get("http://jsonplaceholder.typicode.com/posts/" + postRes.id, function(post) {
+					var $liPost = $('<li/>');
+
+					$liPost.text(post.title);
+
+					$('ul#posts').append($liPost);
+				});
 			});
 		};
 	});
-	
 
-
-
-})
+});
