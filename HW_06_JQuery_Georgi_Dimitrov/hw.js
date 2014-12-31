@@ -18,6 +18,9 @@ $(function() {
 	//Task 07
 	$('div#dynamiccontent').append('<button id="addbutton"/>');
 
+	//Task 17
+	$('div#dynamiccontent').append('<input id="textinput2" type="text"/>');
+
 	//Task 08
 	$('div#dynamiccontent').append('<ul id="posts"/>');
 
@@ -78,5 +81,7 @@ $(function() {
 			});
 		};
 	});
+
+
 
 });
